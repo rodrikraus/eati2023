@@ -13,4 +13,4 @@ jobs:
     steps:
       - run: |
           echo "Mi nombre es Rodrigo Kraus."
-          echo Estoy haciendo un curso de GitHub Actions."
+          echo "Estoy haciendo un curso de GitHub Actions."
