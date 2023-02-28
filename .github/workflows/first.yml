@@ -7,13 +7,11 @@ jobs:
     steps:
       -name: Correr script "eati.py"
       run: python eati.py EATI 2023
-      bash: pwsh
   job2:
     name: Job2
     runs-on: windows-latest
     steps:
       -uses: actions/checkout@v3
-      run: | 
-      echo "(Mi nombre es Rodrigo Kraus.)"
-      echo "(Estoy haciendo un curso de GitHub Actions)"
-      bash: pwsh
+      run: |
+      echo (Mi nombre es Rodrigo Kraus.)
+      echo (Estoy haciendo un curso de GitHub Actions)
