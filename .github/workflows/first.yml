@@ -16,3 +16,4 @@ jobs:
       run: | 
       echo "(Mi nombre es Rodrigo Kraus.)"
       echo "(Estoy haciendo un curso de GitHub Actions)"
+      bash: pwsh
