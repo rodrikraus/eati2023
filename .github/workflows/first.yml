@@ -5,12 +5,13 @@ jobs:
     name: 'Mi primer Job'
     runs-on: ubuntu-latest
     steps:
+      -uses: actions/checkout@v3
       -name: Correr script "eati.py"
       run: python eati.py EATI 2023
   job2:
     name: Job2
     runs-on: windows-latest
     steps:
-      -uses: actions/checkout@v3
-      run: echo "Mi nombre es Rodrigo Kraus."
-      run: echo "Estoy haciendo un curso de GitHub Actions."
+      run: |
+        echo "Mi nombre es Rodrigo Kraus."
+        echo Estoy haciendo un curso de GitHub Actions."
