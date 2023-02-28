@@ -13,5 +13,5 @@ jobs:
     steps:
       -uses: actions/checkout@v3
       run: |
-      echo (Mi nombre es Rodrigo Kraus.)
-      echo (Estoy haciendo un curso de GitHub Actions)
+      echo Mi nombre es Rodrigo Kraus.
+      echo Estoy haciendo un curso de GitHub Actions
