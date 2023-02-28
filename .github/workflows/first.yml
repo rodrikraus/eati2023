@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -name: Correr script "eati.py"
-      run: ./eati.py EATI 2023
+      run: python eati.py EATI 2023
       bash: pwsh
   job2:
     name: Job2
