@@ -17,11 +17,14 @@ jobs:
   job3:
     runs-on: ubuntu-latest
     needs: [job1, job2]
-    - run: env
+    steps:
+      - run: env
   job4:
     runs-on: ubuntu-latest
-    - run: cat /etc/*release
+    steps:
+      - run: cat /etc/*release
   job5:
     runs-on: windows-latest
     needs: [job3, job4]
-    - run: echo "Fin workflow"
+    steps:
+      - run: echo "Fin workflow"
