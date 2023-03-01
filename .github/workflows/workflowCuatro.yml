@@ -15,11 +15,10 @@ jobs:
       JOB_VARIABLE: 'Job Variable'
       SCOPE: 'Scope en job1'
     steps:
-      - uses: actions/checkout@v3
-        env:
+      - env:
           STEP_VARIABLE: 'Step Variable'
           SCOPE: 'Scope en step de job1'
-      - run: echo "$WORKFLOW_VARIABLE, $JOB_VARIABLE, $STEP_VARIABLE, $SCOPE"
+        run: echo "$WORKFLOW_VARIABLE, $JOB_VARIABLE, $STEP_VARIABLE, $SCOPE"
       - run: echo "$SCOPE"
 
 
