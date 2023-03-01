@@ -8,13 +8,13 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: jmoyano/eati2023@main
+      - uses: actions/checkout@v3
         with:
           repository: jmoyano/eati2023
           ref: main
           path: ./main
       - run: cat ./message.txt
-      - uses: jmoyano/eati2023@anotherbranch
+      - uses: actions/checkout@v3
         with:
           repository: jmoyano/eati2023
           ref: anotherbranch
