@@ -13,7 +13,7 @@ jobs:
           repository: jmoyano/cautious-meme
           ref: main
           path: ./main
-      - run: gcc ./main/main.c -o main
+      - run: gcc main/main.c -o main/main
       - uses: actions/upload-artifact@v3
         with:
           name: envoutput
