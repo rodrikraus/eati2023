@@ -29,5 +29,5 @@ jobs:
           path: ./main
       - run: |
           ls
-          ./main/main
+          main/main
 
