@@ -15,9 +15,9 @@ jobs:
           path: ./main
       - run: gcc main.c -o main
       - uses: actions/upload-artifact@v3
-          with:
-            name: envoutput
-            path: ./main
+        with:
+          name: envoutput
+          path: ./main
 
   test:
     runs-on: ubuntu-latest
