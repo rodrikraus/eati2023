@@ -19,5 +19,5 @@ jobs:
           repository: jmoyano/eati2023
           ref: anotherbranch
           path: ./anotherbranch
-      - run: cat main/message.txt
+      - run: cat anotherbranch/message.txt
 
