@@ -27,4 +27,7 @@ jobs:
         with:
           name: envoutput
           path: ./main
-      - run: ls
+      - run: |
+          ls
+          echo hola
+
