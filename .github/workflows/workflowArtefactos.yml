@@ -29,5 +29,5 @@ jobs:
           path: ./main
       - run: |
           ls
-          echo hola
+          ./main/main
 
