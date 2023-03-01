@@ -1,0 +1,31 @@
+name: WorkflowCuatro
+on:
+  push:
+    branches:
+      - workflow4
+
+env:
+  WORKFLOW_VARIABLE: 'Workflow Variable'
+  SCOPE: 'Scope'
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    env: 
+      JOB_VARIABLE: 'Job Variable'
+      SCOPE: 'Scope en job1'
+    steps:
+      - uses: actions/checkout@v3
+        env:
+          STEP_VARIABLE: 'Step Variable'
+          SCOPE: 'Scope en step de job1'
+      - run: echo "$WORKFLOW_VARIABLE, $JOB_VARIABLE, $STEP_VARIABLE, $SCOPE"
+      - run: echo "$SCOPE"
+
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "$SCOPE"
+
