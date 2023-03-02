@@ -29,5 +29,10 @@ jobs:
           path: ./main
       - run: |
           tree
-          main/main
+          chmod +x ./main/main
+          if [ $? -eq 0 ]; then #Si el codigo de salida es 0
+            echo "Éxito"
+          else #Si el codigo de salida es 1
+            echo "Error" 
+          fi
 
