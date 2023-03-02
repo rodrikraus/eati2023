@@ -28,6 +28,6 @@ jobs:
           name: envoutput
           path: ./main
       - run: |
-          ls
+          tree
           main/main
 
