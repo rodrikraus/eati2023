@@ -1,0 +1,38 @@
+name: workFlowArtefactos
+on:
+  push:
+    branches:
+      - branch-Artefactos
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: jmoyano/cautious-meme
+          ref: main
+          path: ./descarga
+      - run: gcc descarga/main.c -o descarga/main
+      - uses: actions/upload-artifact@v3
+        with:
+          name: miArtefacto
+          path: descarga/main
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: miArtefacto
+          path: ./descarga
+      - run: |
+          ls
+          chmod +x ./descarga/main #Doy permisos de ejecución
+          if [ $? -eq 0 ]; then #Si el codigo de salida es 0
+            echo "Éxito"
+          else #Si el codigo de salida es 1
+            echo "Error" 
+          fi
+

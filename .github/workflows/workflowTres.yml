@@ -1,0 +1,23 @@
+name: WorkflowTres
+on:
+  push:
+    branches:
+      - workflow3
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: jmoyano/eati2023
+          ref: main
+          path: ./main
+      - run: cat main/message.txt
+      - uses: actions/checkout@v3
+        with:
+          repository: jmoyano/eati2023
+          ref: anotherbranch
+          path: ./anotherbranch
+      - run: cat anotherbranch/message.txt
+
