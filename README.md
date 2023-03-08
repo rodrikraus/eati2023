@@ -9,5 +9,3 @@ ___
 The repositories that we have created during the course are the following:
 - https://github.com/rodrikraus/eati2023
 - https://github.com/rodrikraus/eati2023-Pipeline
-=======
-Curso de la metodología de trabajo DevOps,  mediante el uso de la herramienta GitHub Actions. #eati2023
